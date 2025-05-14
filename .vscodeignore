@@ -1,0 +1,12 @@
+out/    # Exclude compiled JS from source control if desired, but needed for VSIX
+node_modules/
+src/    # If you only want to ship compiled output
+
+# Development specific
+*.test.ts
+*.map
+
+.git/
+.vscode/
+.DS_Store
+*.vsix

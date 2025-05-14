@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2020", // Target modern ECMAScript version compatible with VS Code's Node.js
+    "outDir": "out",
+    "lib": [
+      "es2020"
+    ],
+    "sourceMap": true,
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".vscode-test"
+  ]
+}

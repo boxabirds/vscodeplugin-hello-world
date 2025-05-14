@@ -1,0 +1,65 @@
+{
+  "name": "typescript-hello-world",
+  "displayName": "TypeScript Hello World Plugin",
+  "description": "A Hello World VS Code plugin in TypeScript to demonstrate common features.",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:helloworld.showInfoMessage",
+    "onCommand:helloworld.showWarningMessage",
+    "onCommand:helloworld.showErrorMessage",
+    "onCommand:helloworld.insertText",
+    "onCommand:helloworld.showQuickPick",
+    "onCommand:helloworld.updateStatusBar",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributions": {
+    "commands": [
+      {
+        "command": "helloworld.showInfoMessage",
+        "title": "Hello TS: Show Info Message"
+      },
+      {
+        "command": "helloworld.showWarningMessage",
+        "title": "Hello TS: Show Warning Message"
+      },
+      {
+        "command": "helloworld.showErrorMessage",
+        "title": "Hello TS: Show Error Message"
+      },
+      {
+        "command": "helloworld.insertText",
+        "title": "Hello TS: Insert Text"
+      },
+      {
+        "command": "helloworld.showQuickPick",
+        "title": "Hello TS: Show Quick Pick"
+      },
+      {
+        "command": "helloworld.updateStatusBar",
+        "title": "Hello TS: Update Status Bar"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^18.x",
+    "typescript": "^5.0.0",
+    "eslint": "^8.40.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.0"
+  }
+}
